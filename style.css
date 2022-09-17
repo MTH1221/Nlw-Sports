@@ -1,7 +1,28 @@
+/*Head*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.player {
+  text-align: center;
+}
+
+.button {
+  font-size: 19px;
+  font-family: 'Times New Roman', Times, serif;
+  color:#9572FC;
+  background-color: transparent;
+  border: 2px solid rebeccapurple;
+  border-radius: 30px;
+  padding: 0 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.1);
 }
 
 header {
@@ -30,6 +51,9 @@ header div:hover {
   transform: scale(1.1);
 }
 
+header div {
+  animation: fromTop .7s .3s backwards;
+}
 
 /*Body*/
 main {
@@ -79,20 +103,21 @@ section p {
   color: #A1A1AA;
 }
 
+section ul, ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  margin-top: 24px;
+}
+
+/*Section Animation*/
 section ul li {
   transition: transform .3s;
 }
 
 section ul li:hover {
   transform: scale(1.1)
-}
-
-section ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-
-  margin-top: 24px;
 }
 
 /*List*/
@@ -116,10 +141,55 @@ ul {
   list-style: none;
 }
 
-header div {
-  animation: fromTop .7s .3s backwards;
+.pc-specs {
+  list-style: circle;
 }
 
+#block1 {
+  margin: 10px 10px;
+  width: 180px;
+  float: right;
+}
+
+#block2 {
+  margin: 10px 1px;
+  width: 180px;
+  float: right;
+}
+
+#block3 {
+  margin: 10px 1px;
+  width: 0px;
+  float: right;
+}
+
+#block4 {
+  margin: 0px 10px;
+  width: 180px;
+  float: right;
+}
+
+#block5 {
+  margin: 1px 60px;
+  width: 180px;
+  float: right;
+}
+
+/*Footer*/
+footer {
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.7;
+  transition: opacity 400ms;
+  }
+
+  footer:hover {
+    opacity: 1;
+ }
+
+/*Animation*/
 @keyframes fromTop {
   from {
     opacity: 0;
@@ -155,5 +225,9 @@ main section:nth-child(2) {
 }
 
 main section:nth-child(3) {
+  animation-delay: .4s;
+}
+
+main section:nth-child(4) {
   animation-delay: .4s;
 }
